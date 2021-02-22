@@ -155,6 +155,36 @@ integrating Fuzzy-SAT with QSYM
 
 (Unfortunately, I still cannot get the main idea of this paper)
 
+## DIFFUZZ: Differential Fuzzing for Side-Channel Analysis
+<https://wcventure.github.io/FuzzingPaper/Paper/ICSE19_DIFFUZZ.pdf>
+
+**Side-channel attacks** is an attack which an attacker could uncover secret data from the program by observing non-functional characteristics of program behavior with considering resources such as execution time, consumed memory, response size, network traffic, or power consumption.
+
+**Differential fuzzing** is a popular software testing technique that detects bugs by providing the same input to similar applications (or to different implementations of the same application), and observing differences in their execution.
+
+###### **DIFFUZZ**
+is a fuzzing-based dynamic analysis approach for detecting side-channel vulnerabilities related to time and space by analyzing two copies of the same program(same public inputs but different secret values) and using **resource-guided heuristics** to find inputs that maximize the difference in resource consumption between secret dependent paths. The methodology of DIFFUZZ can be applied to programs written in any language.	
+
+###### **Analysis Procedure:**:
+- User should provide initial seed files
+- Also provides a driver(written manually), which parses an input file into three elements:
+	- pub (common public value)
+	- sec1, and sec2 (two secret values, one for each program copy)
+- Driver executes two copies of the program on these inputs
+- And measures the cost difference
+- The seed files are put into a queue for further processing(as a central data structure)
+- There is a fuzzer to take inputs from the queue and mutate them repeatedly
+- Then DIFFUZZ executes the driver with those inputs to find if they are interesting for further processing or not, so needs to computes the cost difference between two executions and compares with the maximum cost difference(high-score)
+- The inputs that increase the code coverage of the program or increase high-score will be put into the queue for another process, until a user-specified timeout occurs.
+
+###### **Analysis Outcome**
+
+- If the cost difference is **large** --> means that the program has a side-channel vulnerability
+	- So a developer can use the provided inputs to fix the vulnerability by making the cost similar on both program paths.
+- If the cost difference is **small** (or zero) --> it could mean that the program has no vulnerabilities or that the fuzzer was not run long enough.
+
+
+
 
 
 
