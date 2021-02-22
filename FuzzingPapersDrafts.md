@@ -184,6 +184,28 @@ is a fuzzing-based dynamic analysis approach for detecting side-channel vulnerab
 - If the cost difference is **small** (or zero) --> it could mean that the program has no vulnerabilities or that the fuzzer was not run long enough.
 
 
+## FUZZIFICATION: Anti-Fuzzing Techniques
+<https://wcventure.github.io/FuzzingPaper/Paper/USENIX19_FUZZIFICATION.pdf>
+
+**Fuzzification** decreases:
+- the number of discovered paths
+- the number of identified crashed
+- the number of detected bugs
+
+Fuzzification **features**: (it is not practical simultaneously)
+- First, it should be effective for hindering existing fuzzing tools, finding fewer bugs within a fixed time;
+- second, the protected program should still run efficiently in normal usage;
+- third, the protection code should not be easily identified or removed from the protected binary by straightforward analysis techniques.
+
+Attackers also like a trusted party could do the fuzzing method to find the bugs, so we need a technique to avoid this problem. To solve this problem developer compiles the program code in two different versions.
+
+- One is compiled normally to generate a normal binary.
+- Another one is compiled with Fuzzification techniques to generate a protected binary.
+
+
+Then developer distributes the protected binary version to adversary and trusted parties; but they cannot find as many bugs quickly.
+On the other hand they distribute the normal binary to trusted parties so normal parties can do the fuzzing test on the normal binary with the native speed and find more bugs.
+This approach helps developer to receive bug reports from trusted parties and fix them before attackers abuse it.
 
 
 
