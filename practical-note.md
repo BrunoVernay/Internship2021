@@ -1,30 +1,65 @@
 
 Mutillidae: open source web application
 
+Download XAMPP:
+
+	<tohttps://www.apachefriends.org/download.html>
+    
+Mutillidae installation:
+
+-Download mutillidae or git clone 
+	
+    git clone https://git.code.sf.net/p/mutillidae/git mutillidae-git
+-Copy the mutillidae folder into the /opt/lampp/htdocs folder
+
+Change the directory to /opt/lampp, and start the XAMPP servers
+
+	sudo ./xampp start
+    
+Open the browser, type
+
+	http://localhost/mutillidae
+
+
+
+- sql injection
+
+--------------------------------------
+Fuzzdb
+
 <https://github.com/fuzzdb-project/fuzzdb>
 
-sql injection
+--------------------------------------
+Burp Suite
 
 <https://portswigger.net/burp>
 
-burp suite :We designed Burp Suite Enterprise Edition to support organizations, enabling automated scanning across their entire portfolios
+We designed Burp Suite Enterprise Edition to support organizations, enabling automated scanning across their entire portfolios
 (like wireshark)
+
+--------------------------------
 
 Radamsa : Radamsa is an open-source fuzzing tool that can generate test-cases based on user-specified input data.
 
 
 The CERT Basic Fuzzing Framework (BFF) is a software testing tool that finds defects in applications that run on the Linux and Mac OS X platforms. BFF performs mutational fuzzing on software that consumes file input.
 
+--------------------------------------
 
+unfuzzing the fuzzing
 
 <https://www.youtube.com/watch?v=v_eNiKvzR7s&ab_channel=Codenomicon%2CLtd>
+
+TheCyberMentor channel
+
 <https://www.youtube.com/c/TheCyberMentor/search?query=fuzz>
 
 *********************      
 
 <https://www.youtube.com/c/GynvaelEN/search?query=fuzz>
 
-- Channel
+GynvaelEN Channel
+
 -----------------------------------
 
 <https://www.youtube.com/watch?v=ysZ9w3PcYVU&ab_channel=media.ccc.de>
