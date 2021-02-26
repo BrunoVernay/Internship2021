@@ -37,6 +37,14 @@ Burp Suite
 We designed Burp Suite Enterprise Edition to support organizations, enabling automated scanning across their entire portfolios
 (like wireshark)
 
+Adding Burps Certificate to Firefox
+
+https://www.youtube.com/watch?v=tsZdiuRNWRg&list=PLZOToVAK85MrsyNmNp0yyUTBXqKRTh623&index=29&ab_channel=webpwnized
+
+Configure Firefox with Burp Suite
+
+https://www.youtube.com/watch?v=7ePmWhypzBI&list=PLZOToVAK85MrsyNmNp0yyUTBXqKRTh623&index=28&ab_channel=webpwnized
+
 --------------------------------
 
 Radamsa : Radamsa is an open-source fuzzing tool that can generate test-cases based on user-specified input data.
