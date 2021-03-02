@@ -30,3 +30,26 @@
 	This approach helps developer to receive bug reports from trusted parties and fix them before attackers abuse it.
 
 
+#### TYPES OF FUZZERS
+
+- Feedback-based
+- Mutation-based
+- Generation-based
+
+
+###### Classification of different fuzzer techniques
+
+|             |Feedback-based      |Mutation-based      |Generation-based       |
+|----------------------|----------------------|----------------------|----------------------|
+|UNIFUZZ|            |            |            |
+|   HFL       |            |            |            |
+|     coverage-guided fuzzing     |			  |			   |            |
+|     symbolic analysis    |			  |			   |            |
+|     CSEFuzz    |			  |			   |            |
+|     V-Fuzz     |			  |			   |            |
+|     DIFFUZZ     |			  |			   |            |
+|     FUZZIFICATION     |			  |			   |            |
+|     FUDGE     |			  |			   |            |
+|     FuzzGen     |			  |			   |            |
+|          |			  |			   |            |
+|          |			  |			   |            |
