@@ -209,18 +209,56 @@ On the other hand they distribute the normal binary to trusted parties so normal
 This approach helps developer to receive bug reports from trusted parties and fix them before attackers abuse it.
 
 
+## FUDGE: Fuzz Driver Generation at Scale
+<https://wcventure.github.io/FuzzingPaper/Paper/FSE19_FUDGE.pdf>
+
+**Fudge** automatically generates fuzz driver candidates for libraries based on existing client code. Fudge generates thousands of new drivers for a wide variety of libraries. Each generated driver includes a synthesized C/C++ program and a corresponding build script, and is automatically analyzed for quality.
+
+Fudge system consists of two main components:
+1) A backend pipeline generating fuzz target candidates
+	
+    The pipeline consists of
+    
+    - the Slicing module: The Slicer module scans the whole code repository looking for usages of this library, to extract code snippets.
+    - Synthesis module: The Synthesis module receives the extracted code snippet and completes it by  ensuring that (1) our target API call is fed with the fuzzer input and (2) there are no UnknownX placeholders left in the code.
+    - Evaluation module: Finally, each of these synthesized candidate targets is evaluated by building and running it with a preconfigured time bound.
+    
+2) A frontend UI exposing these to the user
+
+	A system shows the information produced by the backend candidate generation pipeline.
+    - Candidate targets view
+    - Packages view
+    - APIs view
+    - Use sites view
+    - Existing targets view
+
+## FuzzGen: Automatic Fuzzer Generation
+<https://www.usenix.org/system/files/sec20fall_ispoglou_prepub.pdf>
+
+Developed concurrently and independently from **FuzzGen**, **FUDGE** is the most recent effort on automated fuzz driver generation. FUDGE leverages a single library consumer to
+infer valid API usages of a library to synthesize fuzzers. 
+
+There are two major differences:
+
+- First, FUDGE extracts sequences of API calls and their context (called “snippets”) from a single library consumer and then uses these snippets to create fuzz drivers which are then tested using a dynamic analysis.
+
+	Instead of extracting short snippets from consumers, FuzzGen minimizes consumers (iterating over the consumer’s CFG) to only the library calls, their dependent checks, and dependent arguments/data flow.
+    
+- Second, FUDGE creates many small fuzz drivers from an extracted snippet.
+
+	In comparison, FuzzGen merges multiple consumers to a graph where sequences of arbitrary length can be synthesized.
+    
+    Instead of the 1-N approach of FUDGE, FuzzGen uses an M-N approach to increase flexibility.
+    
+    Compared to FUDGE, FuzzGen fuzzers are larger, more generic, focusing on complex API interaction and not just short API sequences.
 
 
+**FuzzGen** is automatically synthesizing fuzzers for complex libraries in a given environment. FuzzGen leverages a whole system analysis to infer the library’s interface and synthesizes fuzzers specifically for that library. FuzzGen requires no human interaction and can be applied to a wide range of libraries. Furthermore, the generated fuzzers leverage LibFuzzer to achieve better code coverage and expose bugs that reside deep in the library.
 
+FuzzGen consists of three parts:
 
+1) An API inference: The API inference component builds an A<sup>2</sup>DG based on all test cases and programs on a system that use a given library.
 
+2) An A<sup>2</sup>DG construction mechanism: The A<sup>2</sup>DG is a graph that records all API interactions, including parameter value range and possible interactions. Our analysis infers library use and constructs a generic A<sup>2</sup>DG based on this use.
 
-
-
-
-
-
-
-
-
-
+3) A fuzzer generator that leverages the A<sup>2</sup>DG to produce a custom libFuzzer “fuzzer stub”. The fuzzer generator synthesizes fuzzers that build up complex state and leverage fuzz input to trigger faults deep in the library.
