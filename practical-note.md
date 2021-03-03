@@ -1,5 +1,5 @@
 
-Mutillidae: open source web application
+## Mutillidae: open source web application
 
 Download XAMPP:
 
@@ -25,12 +25,12 @@ Open the browser, type
 - sql injection
 
 --------------------------------------
-Fuzzdb
+## Fuzzdb
 
 <https://github.com/fuzzdb-project/fuzzdb>
 
 --------------------------------------
-Burp Suite
+## Burp Suite
 
 <https://portswigger.net/burp>
 
@@ -45,94 +45,8 @@ Configure Firefox with Burp Suite
 
 https://www.youtube.com/watch?v=7ePmWhypzBI&list=PLZOToVAK85MrsyNmNp0yyUTBXqKRTh623&index=28&ab_channel=webpwnized
 
---------------------------------
-
-Radamsa : Radamsa is an open-source fuzzing tool that can generate test-cases based on user-specified input data.
-
-
-The CERT Basic Fuzzing Framework (BFF) is a software testing tool that finds defects in applications that run on the Linux and Mac OS X platforms. BFF performs mutational fuzzing on software that consumes file input.
-
---------------------------------------
-
-unfuzzing the fuzzing
-
-<https://www.youtube.com/watch?v=v_eNiKvzR7s&ab_channel=Codenomicon%2CLtd>
-
-TheCyberMentor channel
-
-<https://www.youtube.com/c/TheCyberMentor/search?query=fuzz>
-
-*********************      
-
-<https://www.youtube.com/c/GynvaelEN/search?query=fuzz>
-
-GynvaelEN Channel
-
------------------------------------
-
-<https://www.youtube.com/watch?v=ysZ9w3PcYVU&ab_channel=media.ccc.de>
-
-High speed binary fuzzing::
-
-Fuzzing binary--> hard
-Fuzzing binary in kernel --> harder
-
-Rewriting binaries:
-- Approach 0: black box fuzzing
-- Approach 1: rewrite dynamically
-	- Translate target at runtime
-	- Terrible performance(10-100x slower)
-- Approach 2: rewrite statically
-	- more complex analysis
-	- but much better performance
-	
-	
-	
----------------------------------------------
-
-For fuzzing no needs to have source code!!! how we can write the test case?!
-
-in order to be effective fuzzer should be efficient in running test cases in terms of input choice and speed
-
-----------------------------------------
-<https://www.youtube.com/watch?v=xgfhSzAVm2s&ab_channel=OWASPNZChapter>
-
---------------------------------
-
-<https://www.youtube.com/watch?v=W0ZRZyljKjo&ab_channel=FuzzingLabs-PatrickVentuzelo>
-
-Practical python 
-
-<https://www.youtube.com/watch?v=W0ZRZyljKjo&ab_channel=FuzzingLabs-PatrickVentuzelo>
-
-Cargo fuzzing
-
---------
-
-<https://www.youtube.com/watch?v=S8JvzWDnjc0&ab_channel=BlackHat>
-
-Coverage-guided::: structured fuzzing
-They delete expression from javascript programs instead of just changing bits(mutant--> unstructure fuzzing)
-
-Structure fuzzing--> help you find more bugs
-				--> allows you to fuzz code that doesn't accept an array of bytes
-
-lib fuzzer ----> a coverage guided fuzzer much like AFL
-main fuzzer that we use in chrome and OSS fuzz
-
-3 technique to write structure fuzzer with lib fuzzer:
-- by defining a lib fuzzer custom mutator: when lib fuzzer mutating test cases will call this function to mutate test cases rather than its default mutator. so if we are fuzzing javascript instead of using the default mutator to do stupid things like bit flipping, actually lib fuzzer will call your custom mutator that can do things like you know parse .....
-- *****libprotobuf-mutator ::: will handle mutation.
-protobuf is just a data format like json but with pipes, so you define a schema or spec for the inputs you want libfuzzer to mutate.
-then libprotobuf-mutator will create a test case based on the spec for you.
-- converting to a lib custom mutator: 
-
----------------------------------------
-Hybrid Fuzzing
-
-<https://www.youtube.com/watch?v=uwfMnHdbMA0&ab_channel=NDSSSymposium>
-
 ------------------------
+## Radamsa : Radamsa is an open-source fuzzing tool that can generate test-cases based on user-specified input data.
 
 <https://www.youtube.com/watch?v=obY7YNvVWIs&ab_channel=ExplainedEasy>
 
@@ -227,3 +141,133 @@ in another terminal
 Radamsa will now be running in TCP server mode, and will serve a fuzzed version of whois.txt each time a connection is made to the server
 
 	whois -h localhost:4343 example.com
+	
+-----------------------------------------
+## AFL
+
+For Unix operating systems (Ubuntu, MaxOS, etc.)
+ 
+1. Download AFL: 
+
+        wget http://lcamtuf.coredump.cx/afl/releases/afl-latest.tgz
+        tar -xzvf afl-latest.tgz
+        cd afl-2.52b/
+
+2. Build AFL with `sudo make install` in its directory.
+
+	Then do "make"
+
+3. Now we can fuzz an application. I used below repository:
+
+        git clone https://github.com/fuzzstati0n/fuzzgoat
+        cd fuzzgoat/
+
+4. To compile the application with AFL’s compilers
+
+		export CC=afl-clang-fast
+
+5. Compiling fuzzgoat to a binary
+
+		make
+
+6. Making a directory to keep all test cases
+
+		mkdir afl_in
+
+7. Adding a test case by piping some random, garbage value to the directory
+
+		cp /bin/ps afl_in/
+
+8. Creating output directory
+
+		mkdir afl_out
+
+9. Finally, to fuzz the application use the following command:
+
+		afl-fuzz -i afl_in -o afl_out -- ./fuzzgoat @@
+	then you can see the result in an interface on your terminal.
+	
+* you can also run your program with different generated input files in afl_out/crashes to see the corresponding error.
+--------------------------------
+
+The CERT Basic Fuzzing Framework (BFF) is a software testing tool that finds defects in applications that run on the Linux and Mac OS X platforms. BFF performs mutational fuzzing on software that consumes file input.
+
+--------------------------------------
+
+unfuzzing the fuzzing
+
+<https://www.youtube.com/watch?v=v_eNiKvzR7s&ab_channel=Codenomicon%2CLtd>
+
+TheCyberMentor channel
+
+<https://www.youtube.com/c/TheCyberMentor/search?query=fuzz>
+
+*********************      
+
+<https://www.youtube.com/c/GynvaelEN/search?query=fuzz>
+
+###### GynvaelEN Channel
+
+-----------------------------------
+
+<https://www.youtube.com/watch?v=ysZ9w3PcYVU&ab_channel=media.ccc.de>
+
+###### High speed binary fuzzing::
+
+Fuzzing binary--> hard
+Fuzzing binary in kernel --> harder
+
+Rewriting binaries:
+- Approach 0: black box fuzzing
+- Approach 1: rewrite dynamically
+	- Translate target at runtime
+	- Terrible performance(10-100x slower)
+- Approach 2: rewrite statically
+	- more complex analysis
+	- but much better performance
+	
+	
+	
+---------------------------------------------
+
+For fuzzing no needs to have source code!!! how we can write the test case?!
+
+in order to be effective fuzzer should be efficient in running test cases in terms of input choice and speed
+
+----------------------------------------
+<https://www.youtube.com/watch?v=xgfhSzAVm2s&ab_channel=OWASPNZChapter>
+
+--------------------------------
+
+<https://www.youtube.com/watch?v=W0ZRZyljKjo&ab_channel=FuzzingLabs-PatrickVentuzelo>
+
+###### Practical python 
+
+<https://www.youtube.com/watch?v=W0ZRZyljKjo&ab_channel=FuzzingLabs-PatrickVentuzelo>
+
+###### Cargo fuzzing
+
+--------
+
+<https://www.youtube.com/watch?v=S8JvzWDnjc0&ab_channel=BlackHat>
+
+###### Coverage-guided::: structured fuzzing
+They delete expression from javascript programs instead of just changing bits(mutant--> unstructure fuzzing)
+
+Structure fuzzing--> help you find more bugs
+				--> allows you to fuzz code that doesn't accept an array of bytes
+
+lib fuzzer ----> a coverage guided fuzzer much like AFL
+main fuzzer that we use in chrome and OSS fuzz
+
+3 technique to write structure fuzzer with lib fuzzer:
+- by defining a lib fuzzer custom mutator: when lib fuzzer mutating test cases will call this function to mutate test cases rather than its default mutator. so if we are fuzzing javascript instead of using the default mutator to do stupid things like bit flipping, actually lib fuzzer will call your custom mutator that can do things like you know parse .....
+- *****libprotobuf-mutator ::: will handle mutation.
+protobuf is just a data format like json but with pipes, so you define a schema or spec for the inputs you want libfuzzer to mutate.
+then libprotobuf-mutator will create a test case based on the spec for you.
+- converting to a lib custom mutator: 
+
+---------------------------------------
+###### Hybrid Fuzzing
+
+<https://www.youtube.com/watch?v=uwfMnHdbMA0&ab_channel=NDSSSymposium>
