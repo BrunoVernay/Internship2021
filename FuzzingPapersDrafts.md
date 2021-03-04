@@ -280,3 +280,30 @@ FuzzGen consists of three parts:
   
   We use DFA to solve branch constraints. In ParmeSan, this intuition is used not just to find new code to reach the targets efficiently but also to quickly flip the reached target
 sanitizer checks and trigger bugs. Finally the output of the fuzzer consists of generated error inputs.
+
+## USBFuzz: A Framework for Fuzzing USB Drivers by Device Emulation
+<https://nebelwelt.net/files/20SEC3.pdf>
+
+**USBFuzz** is a cheap, portable, flexible, and modular USB fuzzing framework. At its core, USBFuzz uses an emulated USB device to provide fuzz input to a virtualized kernel. In each iteration, a fuzzer executes a test using the emulated USB device virtually attached to the target system, which forwards the fuzzer generated inputs to the drivers under test when they perform IO operations.
+
+* Different kinds of **attack** could be possible:
+
+	(i) Exhaustive privileges for USB devices (e.g., the famous “autorun” attack that allows USB storage devices to start programs as they are plugged in) ---->>> This attack can be solved by reconfiguring the operating system through customized defenses (e.g., disabling “autorun”, GoodUSB, USBFilter, or USBGuard)
+   
+    (ii) Electrical attacks leveraging physical design flaws ---->>> Hardware attacks can be protected through improved interface design.
+    
+    (iii) Exploiting software vulnerabilities in the host OS ---->>> These issues are hard to find and have high security impact. (**_USBFuzz_**)
+    
+    
+* High level functionalities of main **components**:
+
+1) **Fuzzer:** runs as a userspace process on the host OS. 
+
+    (i) mutating the data fed to device drivers in the target kernel;
+
+    (ii) monitoring and controlling test execution.
+2) **Guest System:** is a virtual machine that runs a target kernel containing the device drivers to test. It provides support for executing the guest code, emulating the fuzzing device as well as the supporting communication device.
+3) **Target Kernel:** contains the code (importantly, device drivers) and runs inside the guest system. The drivers in the kernel are tested when they process the data read from the emulated fuzzing device.
+4) **Fuzzing Device:** is an emulated USB device in the guest system which is connected through the emulated USB interface to the guest system. It forwards the fuzzer-generated data to the host when the target kernel performs IO operations on it.
+5) **Communication Device:** is an emulated device in the guest system intended to facilitate communication between the guest system and the fuzzer component.
+6) **User Mode Agent:** This userspace program runs as a daemon process in the guest system. It monitors the execution of tests. Optionally, it can be customized to perform additional operations on the fuzzing device to trigger function routines of drivers during focused fuzzing.
