@@ -266,9 +266,16 @@ FuzzGen consists of three parts:
 ## ParmeSan: Sanitizer-guided Greybox Fuzzing
 <https://wcventure.github.io/FuzzingPaper/Paper/USENIX20_ParmeSan.pdf>
 
-- **ParmeSan** is a new sanitizer-guided fuzzer that greatly reduces the TTE(time-to-exposure) of real-world bugs, and finds bugs faster than existing state-of-the-art coverage-based fuzzers(Angora) or directed fuzzers(AFLGo), while still covering the same set of bugs.
+**Coverage-guided fuzzers** optimize for covering as much code as possible. Since code coverage over-approximates bug coverage, this approach is less than ideal and may lead to non-trivial time-to-exposure (TTE) of bugs.
 
-	Existing fuzzers detect many bugs at runtime using knowledge from compiler sanitizers. We can leverage it by applying directed fuzzing to actively guide the fuzzing process towards triggering sanitizer checks, we can trigger the same bugs as coverage-guided fuzzers while requiring less code coverage, resulting in a lower time-to-exposure (TTE) of bugs.
+**Directed fuzzers** try to address this problem by directing the fuzzer to a basic block with a potential vulnerability. This approach can greatly reduce the TTE for a specific bug, but such special-purpose fuzzers can then greatly under-approximate overall bug coverage.
+
+**ParmeSan** is a new sanitizer-guided fuzzer that greatly reduces the TTE of real-world bugs, and finds bugs 37% faster than existing state-of-the-art coverage-based fuzzers (Angora) and 288% faster than directed fuzzers (AFLGo), while still covering the same set of bugs.
+1) ParmeSan relies on off-the-shelf sanitizer checks to automatically maximize bug coverage for the target class of bugs.
+2) This allows ParmeSan to find bugs such as memory errors more efficiently and with
+lower TTE than existing solutions. 
+3) Like coverage-guided fuzzers, ParmeSan does not limit itself to specific APIs or areas of the code, but rather aims to find these bugs, wherever they are.
+4) Unlike coverage-guided fuzzers, however, it does not do so by blindly covering all basic blocks in the program. Instead, directing the exploration to execution paths that matter — having the greatest chance of triggering bugs in the shortest time.
 
 - Three main **components** of ParmeSan sanitizer-guided fuzzing pipeline:
 
@@ -307,3 +314,16 @@ sanitizer checks and trigger bugs. Finally the output of the fuzzer consists of 
 4) **Fuzzing Device:** is an emulated USB device in the guest system which is connected through the emulated USB interface to the guest system. It forwards the fuzzer-generated data to the host when the target kernel performs IO operations on it.
 5) **Communication Device:** is an emulated device in the guest system intended to facilitate communication between the guest system and the fuzzer component.
 6) **User Mode Agent:** This userspace program runs as a daemon process in the guest system. It monitors the execution of tests. Optionally, it can be customized to perform additional operations on the fuzzing device to trigger function routines of drivers during focused fuzzing.
+
+## MOPT: Optimize Mutation Scheduling for Fuzzers
+<https://wcventure.github.io/FuzzingPaper/Paper/USENIX19_MOPT.pdf>
+
+The target of **MOPT** is to find an optimal selection probability distribution of operators by aggregating the probabilities found by the particles. MOPT can quickly converge to the best solution of the probability distribution for selecting mutation operators and thus improves the fuzzing performance significantly(can be applied to a wide range of mutation-based fuzzers).
+
+The **mutation scheduler** aims at choosing the next optimal mutation operator, which could find more interesting test cases, for a given runtime context. We simplify this problem as finding an optimal probability distribution of mutation operators, following which the scheduler chooses next operators when testing a target program. We could first let each operator explore its own optimal probability(local). Then, based on those optimal probabilities, we could obtain a global optimal probability distribution of mutation operators.
+
+- MOPT Main Framework--> consists of four core modules
+	- the PSO initialization
+    - updating modules
+    - the pilot fuzzing
+    - core fuzzing modules
