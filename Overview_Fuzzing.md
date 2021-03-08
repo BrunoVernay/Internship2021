@@ -60,16 +60,13 @@
 ||Mutation-Based Fuzzers|Random fuzzers|Template fuzzers|Generational fuzzers|Guided fuzzers| 
 |----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|
 |AFL|       *     |     *       |            |||
-|UNIFUZZ|            |            |            |||
-|HFL|            |            |            |||
-|coverage-guided fuzzing|			  |			   |            |||
-|symbolic analysis|			  |			   |            |||
-|CSEFuzz|			  |			   |            |||
-|V-Fuzz|			  |			   |            |||
-|DIFFUZZ|			  |			   |            |||
-|FUZZIFICATION|			  |			   |            |||
-|FUDGE|			  |			   |            |||
-|FuzzGen|			  |			   |            |||
-|          |			  |			   |            |||
-|          |			  |			   |            |||
+|HFL|            |      *      |            || * |
+|coverage-guided fuzzing|		*	  |			   |            |||
+|symbolic analysis|			  |			   |            | | * |
+|CSEFuzz|			  |			   |            |  * | * |
+|V-Fuzz|			  |			   |            || * |
+|DIFFUZZ|			  |			   |    *        |||
+|FuzzGen|			  |		*	   |            |||
+|USBFuzz|		*	  |			   |            |||
+|ParmeSan|		*	  |			   |            || * |
 
