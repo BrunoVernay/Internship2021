@@ -77,6 +77,8 @@
 ## Commercial Products:
 
 #### **ForAllSecure Mayhem**
+<https://forallsecure.com/blog/top-3-technical-barriers-to-fuzzing>
+<https://forallsecure.com/blog/demystifying-a-docker-image>
 Advanced fuzzing technique integrating symbolic execution and guided fuzzer; it also conducts regression and component testing, and fits directly into the DevOps workflow. 
 
 Advantages:
@@ -87,7 +89,7 @@ Advantages:
 - DevOps flexibility shift-lefts dynamic negative testing.
 - Manage inherited risk from an unchecked supply chain.
 
------ Code coverage(coverage-guided fuzzer)?!
+----- Code coverage(coverage-based fuzzer)?!
 
 #### **beSTORM**
 <https://beyondsecurity.com/fuzzer-bestorm-whitepaper-2.html?cn-reloaded=1>
