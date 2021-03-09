@@ -80,11 +80,12 @@
 Advanced fuzzing technique integrating symbolic execution and guided fuzzer; it also conducts regression and component testing, and fits directly into the DevOps workflow. 
 
 Advantages:
-• Fuzz testing that uncovers deep defects.
-• Actionable results with zero-false positive rates.
-• Autonomous testing at machine speed and scale.
-• DevOps flexibility shift-lefts dynamic negative testing.
-• Manage inherited risk from an unchecked supply chain.
+
+- Fuzz testing that uncovers deep defects.
+- Actionable results with zero-false positive rates.
+- Autonomous testing at machine speed and scale.
+- DevOps flexibility shift-lefts dynamic negative testing.
+- Manage inherited risk from an unchecked supply chain.
 
 ----- Code coverage(coverage-guided fuzzer)?!
 
@@ -111,3 +112,5 @@ beSTORM is expected to find the majority of vulnerabilities that a manual test w
 - Auto Remediation
 - Secret Detection
 - Fuzz Testing: Coverage-guided Fuzz Testing, API Fuzz Testing
+
+	
