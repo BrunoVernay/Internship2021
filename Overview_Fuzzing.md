@@ -1,3 +1,4 @@
+
 # Overview
 
 - **Fuzzing** is a dynamic analysis technique which detects vulnerabilities(crashes, memory leak, unhandled exception) by testing a program with different abnormal or random inputs.
@@ -39,7 +40,6 @@
     
 - There is a **problem** with the normal fuzzing techniques which is related to the **libraries**.  Libraries cannot run as standalone programs, but instead are invoked through another application, so it is needed to have a special fuzzer to have a more complete code coverage called FuzzGen which is automatically synthesizing fuzzers for complex libraries in a given environment.
 
-
 #### TYPES OF FUZZERS
 
 • **_Mutation-Based Fuzzers_** alter existing data samples to create new test data.
@@ -60,9 +60,9 @@
 ||Mutation-Based Fuzzers|Random fuzzers|Template fuzzers|Generational fuzzers|Guided fuzzers| 
 |----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|
 |AFL|       *     |     *       |            |||
-|HFL|            |      *      |            || * |
+|HFL|            |      *      |            | * | * |
 |coverage-guided fuzzing|		*	  |			   |            |||
-|symbolic analysis|			  |			   |            | | * |
+|symbolic analysis|			  |			   |            | * | * |
 |CSEFuzz|			  |			   |            |  * | * |
 |V-Fuzz|			  |			   |            || * |
 |DIFFUZZ|			  |			   |    *        |||
@@ -70,3 +70,44 @@
 |USBFuzz|		*	  |			   |            |||
 |ParmeSan|		*	  |			   |            || * |
 
+
+
+-----------------------------------------
+
+## Commercial Products:
+
+#### **ForAllSecure Mayhem**
+Advanced fuzzing technique integrating symbolic execution and guided fuzzer; it also conducts regression and component testing, and fits directly into the DevOps workflow. 
+
+Advantages:
+• Fuzz testing that uncovers deep defects.
+• Actionable results with zero-false positive rates.
+• Autonomous testing at machine speed and scale.
+• DevOps flexibility shift-lefts dynamic negative testing.
+• Manage inherited risk from an unchecked supply chain.
+
+----- Code coverage(coverage-guided fuzzer)?!
+
+#### **beSTORM**
+<https://beyondsecurity.com/fuzzer-bestorm-whitepaper-2.html?cn-reloaded=1>
+
+It is equipped with prioritization algorithms to enable complete coverage of all inputs that are likely to 'trigger' a security hole, all within a reasonable time frame.
+
+Discover code weaknesses and certify the security strength of any product without access to source code. Test any protocol or hardware with beSTORM, even those used in IoT, process control, automotive and aerospace.
+
+The beSTORM modules support both non-interactive protocols (such as HTTP, possibly the most common protocol in any Internet environment; used by web servers, communication products, and many others), and interactive protocols such as SMTP (used by mail servers, content filtering devices and anti-virus gateways).
+
+beSTORM is expected to find the majority of vulnerabilities that a manual test would reveal within the first 24 hours of automated testing. The full test is expected to take several days to several months – depending on the size and complexity of the application. Distributed capabilities enable to shorten this time considerably by sharing the task between multiple machines. In any event, the testing is completely automated and requires no manual intervention.
+
+#### **DevSecOps**
+<https://about.gitlab.com/solutions/dev-sec-ops/>
+
+- Continuous security testing capabilities
+- Static Application Security Testing (SAST)
+- Dynamic Application Security Testing (DAST)
+- Dependency Scanning
+- Container Scanning
+- License Compliance
+- Auto Remediation
+- Secret Detection
+- Fuzz Testing: Coverage-guided Fuzz Testing, API Fuzz Testing
