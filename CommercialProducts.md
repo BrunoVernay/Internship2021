@@ -74,6 +74,11 @@ The beSTORM modules support both non-interactive protocols (such as HTTP, possib
 
 beSTORM is expected to find the majority of vulnerabilities that a manual test would reveal within the first 24 hours of automated testing. The full test is expected to take several days to several months – depending on the size and complexity of the application. Distributed capabilities enable to shorten this time considerably by sharing the task between multiple machines. In any event, the testing is completely automated and requires no manual intervention.
 
+## AFLNet: A Greybox Fuzzer for Network Protocols(stateful Coverage-based Greybox Fuzzing)
+<https://github.com/aflnet/aflnet>
+
+**AFLNet** is a greybox fuzzer for protocol implementations. Unlike existing protocol fuzzers, it takes a mutational approach and uses state-feedback, in addition to code-coverage feedback, to guide the fuzzing process. AFLNet is seeded with a corpus of recorded message exchanges between the server and an actual client. No protocol specification or message grammars are required. It acts as a client and replays variations of the original sequence of messages sent to the server and retains those variations that were effective at increasing the coverage of the code or state space. To identify the server states that are exercised by a message sequence, AFLNet uses the server’s response codes. From this feedback, AFLNet identifies progressive regions in the state space, and systematically steers towards such regions.
+
 ## APIFuzzer — HTTP API Testing Framework
 <https://pypi.org/project/APIFuzzer/>
 
