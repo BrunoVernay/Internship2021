@@ -89,8 +89,6 @@ Advantages:
 - DevOps flexibility shift-lefts dynamic negative testing.
 - Manage inherited risk from an unchecked supply chain.
 
------ Code coverage(coverage-based fuzzer)?!
-
 #### **beSTORM**
 <https://beyondsecurity.com/fuzzer-bestorm-whitepaper-2.html?cn-reloaded=1>
 
@@ -115,4 +113,3 @@ beSTORM is expected to find the majority of vulnerabilities that a manual test w
 - Secret Detection
 - Fuzz Testing: Coverage-guided Fuzz Testing, API Fuzz Testing
 
-	
