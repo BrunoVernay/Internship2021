@@ -103,8 +103,6 @@ Introduced to address the aforementioned limitations of current CGF and SBF appr
 - Meanwhile, the dynamically constructed state model helps to drive the fuzzing towards more important code parts by using both the state coverage and code coverage information of the retained message sequences.
 
 
-<style type="text/css">
-</style>
 <table class="tg">
 <caption>Effectiveness. Mean coverage increase (%Increase), effect size (Aˆ12), and statistical significance (p-value) when comparing AFLNET to BOOFUZZ and AFLNWE, respectively. A Vargha-Delaney Aˆ12 measure above 0.71 indicates a large effect size in favor of AFLNET. Statistical significance is computed using the Mann-Whitney U test.</caption>
 <thead>
