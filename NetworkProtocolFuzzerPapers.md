@@ -95,7 +95,7 @@ and in the industry: Peach, beSTORM
 These tools traverse a given protocol model, in form of a finite state machine or a graph, and leverage data models/grammars of messages
 accepted at the states to generate (syntactically valid) message sequences and stress test the SUT. However, their effectiveness heavily depends on the completeness of the given state model and data model which are normally written manually based on the developers' understanding of the protocol specification and the sample captured network traffic between the client and the server.
 
-**AFLNET– the first stateful CGF (SCGF) tool**
+**AFLNET– the first stateful CGF(Coverage-based Greybox Fuzzing) (SCGF) tool**
 
 Introduced to address the aforementioned limitations of current CGF and SBF approaches.
 
@@ -221,5 +221,3 @@ Introduced to address the aforementioned limitations of current CGF and SBF appr
         </tr>
     </tbody>
 </table>
-
-Github: <https://github.com/aflnet/aflnet>
