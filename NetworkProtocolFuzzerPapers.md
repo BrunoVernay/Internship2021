@@ -102,3 +102,126 @@ Introduced to address the aforementioned limitations of current CGF and SBF appr
 - Fuzzing helps to generate new message sequences to cover new states and make the state model gradually more complete.
 - Meanwhile, the dynamically constructed state model helps to drive the fuzzing towards more important code parts by using both the state coverage and code coverage information of the retained message sequences.
 
+
+<style type="text/css">
+</style>
+<table class="tg">
+<caption>Effectiveness. Mean coverage increase (%Increase), effect size (Aˆ12), and statistical significance (p-value) when comparing AFLNET to BOOFUZZ and AFLNWE, respectively. A Vargha-Delaney Aˆ12 measure above 0.71 indicates a large effect size in favor of AFLNET. Statistical significance is computed using the Mann-Whitney U test.</caption>
+<thead>
+  <tr>
+    <th class="tg-c3ow"></th>
+    <th class="tg-0pky">Protocol</th>
+    <th class="tg-0pky" colspan="3">Branch Coverage</th>
+    <th class="tg-0pky" colspan="3">Statement Coverage</th>
+    <th class="tg-0pky" colspan="3">State Coverage</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-c3ow" colspan="2"></td>
+    <td class="tg-0pky">%Increase</td>
+    <td class="tg-0pky">A<sub>12</sub></td>
+    <td class="tg-0pky">p-value</td>
+    <td class="tg-0pky">%Increase</td>
+    <td class="tg-0pky">A<sub>12</sub></td>
+    <td class="tg-0pky">p-value</td>
+    <td class="tg-0pky">%Increase</td>
+    <td class="tg-0pky">A<sub>12</sub></td>
+    <td class="tg-0pky">p-value</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow" rowspan="2">AFL<sub>NET</sub> vs AFL<sub>NWE</sub></td>
+    <td class="tg-0pky">FTP</td>
+    <td class="tg-0pky">121.06%</td>
+    <td class="tg-0pky">1.000</td>
+    <td class="tg-0pky">&lt;0.001</td>
+    <td class="tg-0pky">79.45%</td>
+    <td class="tg-0pky">1.000</td>
+    <td class="tg-0pky">&lt;0.001</td>
+    <td class="tg-0pky">85.00%</td>
+    <td class="tg-0pky">1.000</td>
+    <td class="tg-0pky">&lt;0.001</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">RTSP</td>
+    <td class="tg-0pky">3.49%</td>
+    <td class="tg-0pky">0.335</td>
+    <td class="tg-0pky">0.076</td>
+    <td class="tg-0pky">2.44%</td>
+    <td class="tg-0pky">0.228</td>
+    <td class="tg-0pky">0.003</td>
+    <td class="tg-0pky">8.58%</td>
+    <td class="tg-0pky">0.392</td>
+    <td class="tg-0pky">0.230</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow" rowspan="2">AFL<sub>NET</sub> vs BOOFUZZ</td>
+    <td class="tg-0pky">FTP</td>
+    <td class="tg-0pky">57.73%</td>
+    <td class="tg-0pky">1.000</td>
+    <td class="tg-0pky">0.026</td>
+    <td class="tg-0pky">49.72%</td>
+    <td class="tg-0pky">1.000</td>
+    <td class="tg-0pky">0.026</td>
+    <td class="tg-0pky">37.00%</td>
+    <td class="tg-0pky">1.000</td>
+    <td class="tg-0pky">0.020</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">RTSP</td>
+    <td class="tg-0pky">64.13%</td>
+    <td class="tg-0pky">1.000</td>
+    <td class="tg-0pky">0.026</td>
+    <td class="tg-0pky">62.09%</td>
+    <td class="tg-0pky">1.000</td>
+    <td class="tg-0pky">0.026</td>
+    <td class="tg-0pky">100.00%</td>
+    <td class="tg-0pky">1.000</td>
+    <td class="tg-0pky">0.019</td>
+  </tr>
+</tbody>
+</table>
+
+<table>
+<caption>Bugs found and average time to error comparison</caption>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Time to Error</th>
+        </tr>
+        <tr>
+            <th>Bug ID</th>
+            <th>BOOFUZZ</th>
+			<th>AFL<sub>NWE</sub></th>
+			<th>AFL<sub>NET</sub></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>CVE-2018-4013</td>
+            <td>>24h</td>
+            <td>1h 21m 37s</td>
+			<td>1h 18m 10s</td>
+        </tr>
+        <tr>
+            <td>CVE-2019-7733</td>
+            <td>>24h</td>
+            <td>2h 29m 36s</td>
+			<td>1h 45m 42s</td>
+        </tr>
+        <tr>
+            <td>CVE-2019-7314</td>
+            <td>>24h</td>
+            <td>>24h 00m 00s</td>
+			<td>1h 38m 16s</td>
+        </tr>
+		<tr>
+            <td>CVE-2019-15232</td>
+            <td>>24h</td>
+            <td>0h 34m 21s</td>
+			<td>0h 21m 26s</td>
+        </tr>
+    </tbody>
+</table>
+
+Github: <https://github.com/aflnet/aflnet>
