@@ -22,14 +22,14 @@ Fuzzing techniques: AFL, Honggfuzz, LibFuzzer
 <https://github.com/google/honggfuzz>
 A security oriented, feedback-driven, evolutionary, easy-to-use fuzzer with interesting analysis options.
 
-(Apache HTTPD,...)
+(Apache **HTTPD**,...)
 
 ## Stateful Blackbox Fuzzing (SBF)
 
 Several SBF tools in academia:  Sulley, **BooFuzz**, 
 and in the industry: **Peach**, **beSTORM**
 
-### BooFuzz
+### BooFuzz - _HTTP & Modbus_
 <https://boofuzz.readthedocs.io/en/stable/>
 
 Boofuzz features:
@@ -46,7 +46,7 @@ Boofuzz features:
 - Extensible instrumentation/failure detection.
 - Far fewer bugs.
 
-### Peach
+### Peach - _HTTP & Modbus_
 The Peach Fuzzer Platform uses automated generative and mutational modeling and intelligent test case generation to reveal the hidden bugs.
 <https://gitlab.com/gitlab-org/security-products/protocol-fuzzer-ce>
 
@@ -64,14 +64,15 @@ The Peach Fuzzer Platform uses automated generative and mutational modeling and 
 - Fuzz Testing: Fuzzit(Coverage-guided Fuzz Testing), API Fuzz Testing/Peach(Behavioral Fuzz Testing)
 	<https://www.youtube.com/c/GitLabUnfiltered/search?query=fuzz>
 
-### **beSTORM**
+### **beSTORM** - _Modbus Protocol_
 <https://beyondsecurity.com/fuzzer-bestorm-whitepaper-2.html?cn-reloaded=1>
+<https://beyondsecurity.com/dynamic-fuzzing-testing-modbus-protocol.html>  ////// **Modbus Protocol**
 
 It is equipped with prioritization algorithms to enable complete coverage of all inputs that are likely to 'trigger' a security hole, all within a reasonable time frame.
 
 Discover code weaknesses and certify the security strength of any product without access to source code. Test any protocol or hardware with beSTORM, even those used in IoT, process control, automotive and aerospace.
 
-The beSTORM modules support both non-interactive protocols (such as HTTP, possibly the most common protocol in any Internet environment; used by web servers, communication products, and many others), and interactive protocols such as SMTP (used by mail servers, content filtering devices and anti-virus gateways).
+The beSTORM modules support both non-interactive protocols (such as **HTTP**, possibly the most common protocol in any Internet environment; used by web servers, communication products, and many others), and interactive protocols such as SMTP (used by mail servers, content filtering devices and anti-virus gateways).
 
 beSTORM is expected to find the majority of vulnerabilities that a manual test would reveal within the first 24 hours of automated testing. The full test is expected to take several days to several months – depending on the size and complexity of the application. Distributed capabilities enable to shorten this time considerably by sharing the task between multiple machines. In any event, the testing is completely automated and requires no manual intervention.
 
@@ -151,3 +152,30 @@ This project **features**:
 <https://www.soapui.org/learn/security/security-vulnerability-testing/#_ga=2.84391961.16581309.1615304739-191207751.1615304739>
 
 It is a software testing tool but not just by fuzzing technique.
+
+## Fuzzowski
+<https://github.com/nccgroup/fuzzowski>
+
+Protocols implemented
+- LPD (Line Printing Daemon): Fully implemented
+- IPP (Internet Printing Protocol): Partially implemented
+- BACnet (Building Automation and Control networks Protocol): Partially implemented
+- **Modbus** (ICS communication protocol): Partially implemented
+
+More explanation on ICS protocols: <https://1modm.github.io/Fuzzing_ICS_protocols.html>
+
+## Defensic
+<https://www.synopsys.com/software-integrity/security-testing/fuzz-testing.html>
+<https://community.synopsys.com/s/article/How-to-Fuzz-test-Modbus-Master-and-PLC-devices>
+
+is a commercial automated fuzzing framework with support for a wide variety of ICS protocols such as **Modbus**, Profinet, DNP3, OPC, BACnet, IEC104 and more.
+
+**Defensics** is a black box fuzzer, meaning it doesn’t require source code to run. With Defensics, users can secure their cyber supply chain to ensure the interoperability, robustness, quality, and security of software and devices before introducing them into IT or lab environments.
+
+## Aegis 2014
+<https://stepfunc.io/products/aegis-fuzzer/>
+<https://github.com/ITI/ICS-Security-Tools/blob/master/tools/mirrored/aegis-opensource/manual.pdf>
+
+is a smart fuzzing framework for **Modbus**, DNP3 and the IEC104 protocol. 
+
+**Aegis** is a smart fuzzer for power system protocols that can identify robustness and security issues in communications software before it is deployed in a production system.
