@@ -48,6 +48,7 @@ Boofuzz features:
 
 ### Peach
 The Peach Fuzzer Platform uses automated generative and mutational modeling and intelligent test case generation to reveal the hidden bugs.
+<https://gitlab.com/gitlab-org/security-products/protocol-fuzzer-ce>
 
 ##### **DevSecOps**
 <https://about.gitlab.com/solutions/dev-sec-ops/>
@@ -60,8 +61,8 @@ The Peach Fuzzer Platform uses automated generative and mutational modeling and 
 - License Compliance
 - Auto Remediation
 - Secret Detection
-- Fuzz Testing: Coverage-guided Fuzz Testing, API Fuzz Testing
-
+- Fuzz Testing: Fuzzit(Coverage-guided Fuzz Testing), API Fuzz Testing/Peach(Behavioral Fuzz Testing)
+	<https://www.youtube.com/c/GitLabUnfiltered/search?query=fuzz>
 
 ### **beSTORM**
 <https://beyondsecurity.com/fuzzer-bestorm-whitepaper-2.html?cn-reloaded=1>

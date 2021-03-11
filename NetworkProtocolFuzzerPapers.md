@@ -233,7 +233,7 @@ Introduced to address the aforementioned limitations of current CGF and SBF appr
 **Industrial Control System (ICS) protocols** refers to a system combining hardware and software with network connectivity so as to support
 critical infrastructure.(Modbus, DNP3)
 
-**Peach* **fuzzing is built on top of traditional protocol fuzzing Peach. It is equiped with coverage-guided packet crack and generation.
+**Peach* fuzzing** is built on top of traditional protocol fuzzing Peach. It is equiped with coverage-guided packet crack and generation.
 
 Results show that, compared with the original Peach, Peach* achieves the same code coverage and bug detection numbers at the speed of 1.2X-25X. It also gains final increase with 8.35%-36.84% more paths within 24 hours, and has exposed 9 previously unknown vulnerabilities.
 
@@ -245,6 +245,4 @@ Peach* consists of three main **components**:
 
 (3) **applying semantic aware generation with necessary file repairment**:  Instead of starting from scratch, it derives new inputs by selecting appropriate pieces from the constructed corpus in preference to instantiation from input model.
 
-## A Deep Convolution Generative Adversarial Networks Based Fuzzing Framework For Industry Control Protocols
-<https://www.scedt.tees.ac.uk/s.qin/papers/jims.pdf>
 
