@@ -148,3 +148,5 @@ This project **features**:
 
 ## SoapUI
 <https://www.soapui.org/learn/security/security-vulnerability-testing/#_ga=2.84391961.16581309.1615304739-191207751.1615304739>
+
+It is a software testing tool but not just by fuzzing technique.
