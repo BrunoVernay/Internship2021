@@ -2,8 +2,11 @@
 
 ## ForAllSecure Mayhem
 <https://forallsecure.com/blog/top-3-technical-barriers-to-fuzzing>
+
 <https://forallsecure.com/blog/demystifying-a-docker-image>
+
 <https://go.forallsecure.com/hubfs/Content/Solution-Briefs/br-mayhem-for-api-solution-brief.pdf>
+
 <https://go.forallsecure.com/hubfs/Content/Solution-Briefs/br-mayhem-solution-brief.pdf?hsLang=en>
 
 Advanced fuzzing technique integrating symbolic execution and guided fuzzer; it also conducts regression and component testing, and fits directly into the DevOps workflow. 
@@ -66,6 +69,7 @@ The Peach Fuzzer Platform uses automated generative and mutational modeling and 
 
 ### **beSTORM** - _Modbus Protocol_
 <https://beyondsecurity.com/fuzzer-bestorm-whitepaper-2.html?cn-reloaded=1>
+
 <https://beyondsecurity.com/dynamic-fuzzing-testing-modbus-protocol.html>  ////// **Modbus Protocol**
 
 It is equipped with prioritization algorithms to enable complete coverage of all inputs that are likely to 'trigger' a security hole, all within a reasonable time frame.
@@ -138,6 +142,7 @@ This project **features**:
 
 ## Wfuzz
 <https://wfuzz.readthedocs.io/en/latest/>
+
 <https://github.com/xmendez/wfuzz>
 
 **Wfuzz** is more than a web content scanner:
@@ -166,6 +171,7 @@ More explanation on ICS protocols: <https://1modm.github.io/Fuzzing_ICS_protocol
 
 ## Defensic
 <https://www.synopsys.com/software-integrity/security-testing/fuzz-testing.html>
+
 <https://community.synopsys.com/s/article/How-to-Fuzz-test-Modbus-Master-and-PLC-devices>
 
 is a commercial automated fuzzing framework with support for a wide variety of ICS protocols such as **Modbus**, Profinet, DNP3, OPC, BACnet, IEC104 and more.
@@ -174,6 +180,7 @@ is a commercial automated fuzzing framework with support for a wide variety of I
 
 ## Aegis 2014
 <https://stepfunc.io/products/aegis-fuzzer/>
+
 <https://github.com/ITI/ICS-Security-Tools/blob/master/tools/mirrored/aegis-opensource/manual.pdf>
 
 is a smart fuzzing framework for **Modbus**, DNP3 and the IEC104 protocol. 
