@@ -84,10 +84,10 @@ Two main criteria:
 ## FuSeBMC: A White-Box Fuzzer for Finding Security Vulnerabilities in C Programs
 <https://arxiv.org/pdf/2012.11223.pdf>
 
-## AFLNET: A Greybox Fuzzer for Network Protocols
+## AFL<sub>NET</sub>: A Greybox Fuzzer for Network Protocols
 <https://mboehme.github.io/paper/ICST20.AFLNet.pdf>
 
-**AFLNET** is the first greybox fuzzer for protocol implementations. Unlike existing protocol fuzzers, AFLNET takes a mutational approach and uses state-feedback to guide the fuzzing process. AFLNET is seeded with a corpus of recorded message exchanges between the server and an actual client. No protocol specification or message grammars are required. AFLNET acts as a client and replays variations of the original sequence of messages sent to the server and retains those variations that were effective at increasing the coverage of the code or state space.
+**AFL<sub>NET</sub>** is the first greybox fuzzer for protocol implementations. Unlike existing protocol fuzzers, AFL<sub>NET</sub> takes a mutational approach and uses state-feedback to guide the fuzzing process. AFL<sub>NET</sub> is seeded with a corpus of recorded message exchanges between the server and an actual client. No protocol specification or message grammars are required. AFL<sub>NET</sub> acts as a client and replays variations of the original sequence of messages sent to the server and retains those variations that were effective at increasing the coverage of the code or state space.
 
 **Stateful Blackbox Fuzzing (SBF)**
 
@@ -97,7 +97,7 @@ and in the industry: Peach, beSTORM
 These tools traverse a given protocol model, in form of a finite state machine or a graph, and leverage data models/grammars of messages
 accepted at the states to generate (syntactically valid) message sequences and stress test the SUT. However, their effectiveness heavily depends on the completeness of the given state model and data model which are normally written manually based on the developers' understanding of the protocol specification and the sample captured network traffic between the client and the server.
 
-**AFLNET– the first stateful CGF(Coverage-based Greybox Fuzzing) (SCGF) tool**
+**AFL<sub>NET</sub>– the first stateful CGF(Coverage-based Greybox Fuzzing) (SCGF) tool**
 
 Introduced to address the aforementioned limitations of current CGF and SBF approaches.
 
@@ -106,7 +106,7 @@ Introduced to address the aforementioned limitations of current CGF and SBF appr
 
 
 <table class="tg">
-<caption>Effectiveness. Mean coverage increase (%Increase), effect size (Aˆ12), and statistical significance (p-value) when comparing AFLNET to BOOFUZZ and AFLNWE, respectively. A Vargha-Delaney Aˆ12 measure above 0.71 indicates a large effect size in favor of AFLNET. Statistical significance is computed using the Mann-Whitney U test.</caption>
+<caption>Effectiveness. Mean coverage increase (%Increase), effect size (A<sub>12</sub>), and statistical significance (p-value) when comparing AFL<sub>NET</sub> to BooFUZZ and AFL<sub>NWE</sub>, respectively. A Vargha-Delaney A<sub>12</sub> measure above 0.71 indicates a large effect size in favor of AFL<sub>NET</sub>. Statistical significance is computed using the Mann-Whitney U test.</caption>
 <thead>
   <tr>
     <th class="tg-c3ow"></th>
@@ -233,7 +233,7 @@ Introduced to address the aforementioned limitations of current CGF and SBF appr
 **Industrial Control System (ICS) protocols** refers to a system combining hardware and software with network connectivity so as to support
 critical infrastructure.(Modbus, DNP3)
 
-**Peach* fuzzing** is built on top of traditional protocol fuzzing Peach. It is equiped with coverage-guided packet crack and generation.
+Peach* fuzzing is built on top of traditional protocol fuzzing Peach. It is equiped with coverage-guided packet crack and generation.
 
 Results show that, compared with the original Peach, Peach* achieves the same code coverage and bug detection numbers at the speed of 1.2X-25X. It also gains final increase with 8.35%-36.84% more paths within 24 hours, and has exposed 9 previously unknown vulnerabilities.
 
