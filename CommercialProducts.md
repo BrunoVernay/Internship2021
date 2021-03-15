@@ -29,7 +29,7 @@
     <thead>
         <tr>
             <th>Tools</th>
-            <th>Company</th>
+            <th>Company/Person</th>
             <th>Open-source</th>
    	        <th>Protocol(s)</th>
             <th>Priority*</th>
