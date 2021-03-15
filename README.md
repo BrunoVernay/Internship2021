@@ -33,11 +33,10 @@
 		+ [beSTORM](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#bestorm---modbus-protocol)
 		+ [AFLNet](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#aflnet-a-greybox-fuzzer-for-network-protocolsstateful-coverage-based-greybox-fuzzing)
 		+ [APIFuzzer](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#apifuzzer--http-api-testing-framework)
-		+ [HTTP Method Fuzzing Scan](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#http-method-fuzzing-scan)
-		+ [Artillery](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#fuzz-testing-http-endpointsartillery)
+		+ [Fuzz-testing HTTP endpoints](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#fuzz-testing-http-endpointsartillery)
 		+ [HTTP-FUZZER](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#http-fuzzer)
 		+ [Wfuzz](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#wfuzz)
-
+		+ [SoapUI](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#soapui)
 
 	* Modbus Protocol
 		+ [BooFuzz](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#boofuzz---http--modbus)
@@ -47,6 +46,5 @@
 		+ [Defensic](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#defensic)
 		+ [Aegis](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#aegis-2014)
 
-	* [SoapUI](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#soapui)
 
 - [Practical_Notes](https://github.com/pinkhat-m/Internship2021/blob/master/practical-note.md)
