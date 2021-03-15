@@ -10,11 +10,10 @@
 	* [beSTORM](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#bestorm---modbus-protocol)
 	* [AFLNet](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#aflnet-a-greybox-fuzzer-for-network-protocolsstateful-coverage-based-greybox-fuzzing)
 	* [APIFuzzer](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#apifuzzer--http-api-testing-framework)
-	* [HTTP Method Fuzzing Scan](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#http-method-fuzzing-scan)
-	* [Artillery](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#fuzz-testing-http-endpointsartillery)
+	* [Fuzz-testing HTTP endpoints](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#fuzz-testing-http-endpointsartillery)
 	* [HTTP-FUZZER](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#http-fuzzer)
 	* [Wfuzz](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#wfuzz)
-
+	* [SoapUI](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#soapui)
 
 - Modbus Protocol
 	* [BooFuzz](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#boofuzz---http--modbus)
@@ -24,7 +23,113 @@
 	* [Defensic](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#defensic)
 	* [Aegis](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#aegis-2014)
 
-- [SoapUI](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#soapui)
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Tools</th>
+            <th>Company</th>
+            <th>Open-source</th>
+   	        <th>Protocol(s)</th>
+            <th>Priority*</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><b>Mayhem</td>
+            <td><a href= "https://forallsecure.com/">ForAllSecure</a></td>
+            <td>30-day free trial</td>
+            <td>HTTP</td>
+			<td>1</td>
+        </tr>
+        <tr>
+            <td><b>BooFuzz</td>
+			<td><a href= "https://github.com/jtpereyda">jtpereyda</a></td>
+			<td>Yes</td>
+            <td>HTTP/Modbus</td>			
+			<td>4</td>
+        </tr>
+        <tr>
+            <td><b>Peach</td>
+			<td><a href="https://about.gitlab.com/">GitLab</a></td>
+			<td>30-day free trial</td>
+            <td>HTTP/Modbus</td>			
+			<td>1</td>
+        </tr>
+        <tr>
+            <td><b>beSTORM</td>
+			<td><a href="https://beyondsecurity.com/">Beyond Security</a></td>
+			<td>Free trial</td>
+            <td>HTTP/Modbus</td>			
+			<td>3</td>
+        </tr>
+        <tr>
+            <td><b>AFL<sub>NET</sub></td>
+			<td><a href="">Michal Zalewski</a></td>
+			<td>Yes</td>
+            <td>HTTP</td>			
+			<td>2</td>
+        </tr>
+        <tr>
+            <td><b>APIFuzzer</td>
+			<td><a href="https://github.com/KissPeter">Péter Kiss</a></td>
+			<td>Yes</td>
+            <td>HTTP</td>			
+			<td></td>
+        </tr>
+        <tr>
+            <td><b>Fuzz-testing HTTP endpoints(Plugin)</td>
+			<td><a href="https://artillery.io/">Artillery</a></td>
+			<td>Yes</td>
+            <td>HTTP</td>			
+			<td></td>
+        </tr>
+        <tr>
+            <td><b>HTTP-Fuzzer</td>
+			<td><a href="https://github.com/tehmoon">Tehmoon</a></td>
+			<td>Yes</td>
+            <td>HTTP</td>			
+			<td></td>
+        </tr>
+        <tr>
+            <td><b>Wfuzz</td>
+			<td><a href="http://wfuzz.io/">Wfuzz</a></td>
+			<td>Yes</td>
+            <td>HTTP</td>			
+			<td></td>
+        </tr>
+        <tr>
+            <td><b>SoapUI/ReadyAPI(Morefeatures)</td>
+			<td><a href="https://smartbear.com/">SmartBear</a></td>
+			<td>Yes/14-day free trial</td>
+            <td>HTTP</td>			
+			<td></td>
+        </tr>           
+        <tr>
+            <td><b>Fuzzowski</td>
+			<td><a href="https://www.nccgroup.com/">NCC Group Plc</a></td>
+			<td>Yes</td>
+            <td>Modbus</td>			
+			<td></td>
+        </tr>
+        <tr>
+            <td><b>Defensic</td>
+			<td><a href="https://www.synopsys.com/">Synopsys</a></td>
+			<td>No</td>
+            <td>Modbus</td>			
+			<td></td>
+        </tr>         
+        <tr>
+            <td><b>Aegis</td>
+			<td><a href="https://stepfunc.io/">Step Function I/O</a></td>
+			<td>No</td>
+            <td>Modbus</td>			
+			<td></td>
+        </tr>                                                              
+    </tbody> 
+</table>
+* Priority is for arranging the tools in the best order in terms of performance. 1 has a higher priority.
 
 
 ## Mayhem
@@ -133,20 +238,7 @@ APIFuzzer main **features**:
 	- Log to stdout instead of syslog
 - Configurable log level
 
-## HTTP Method Fuzzing Scan
-<https://support.smartbear.com/readyapi/docs/security/scans/types/fuzzing-http.html>
-
-The **HTTP Method Fuzzing scan** finds weaknesses in the service by generating the semi-random input through HTTP methods.
-
-How it works:
-
-The HTTP Method Fuzzing scan generates a multitude of requests by using HTTP methods not included in the API definition.
-
-It uses assertions to validate each response and check if it includes any information about potential vulnerabilities.
-
-If a response passes all assertions, PASS will be logged for that response. If any assertion fails, FAIL will be logged.
-
-## Fuzz-testing HTTP endpoints(Artillery)
+## Fuzz-testing HTTP endpoints(Plugin)
 <https://artillery.io/docs/guides/plugins/plugin-fuzzer.html>
 
 The plugin lets you use Artillery to send a lot of unexpected and weird payloads to your API endpoints. You can then monitor your backend for exceptions, errors or crashes, and improve security and reliability of your system by fixing any issues uncovered.
@@ -182,10 +274,14 @@ This project **features**:
 
 - Wfuzz exposes a simple language interface to the previous HTTP requests/responses performed using Wfuzz or other tools, such as Burp. This allows you to perform manual and semi-automatic tests with full context and understanding of your actions, without relying on a web application scanner underlying implementation.
 
-## SoapUI
+## SoapUI/ReadyAPI
+<https://www.soapui.org/downloads/soapui/>
+
 <https://www.soapui.org/learn/security/security-vulnerability-testing/#_ga=2.84391961.16581309.1615304739-191207751.1615304739>
 
-It is a software testing tool but not just by fuzzing technique.
+SoapUI is the world's leading Functional Testing tool for SOAP and REST testing. With its easy-to-use graphical interface, and enterprise-class features, SoapUI allows you to easily and rapidly create and execute automated functional, regression, and load tests. In a single test environment, SoapUI provides complete test coverage - from SOAP and REST-based Web services, to JMS enterprise messaging layers, databases, Rich Internet Applications, and much more. And that's just the beginning.
+
+SoapUI: Open-source version / ReadyAPI(More features): has a trial version
 
 ## Fuzzowski
 <https://github.com/nccgroup/fuzzowski>
@@ -207,7 +303,7 @@ is a commercial automated fuzzing framework with support for a wide variety of I
 
 **Defensics** is a black box fuzzer, meaning it doesn’t require source code to run. With Defensics, users can secure their cyber supply chain to ensure the interoperability, robustness, quality, and security of software and devices before introducing them into IT or lab environments.
 
-## Aegis 2014
+## Aegis
 <https://stepfunc.io/products/aegis-fuzzer/>
 
 <https://github.com/ITI/ICS-Security-Tools/blob/master/tools/mirrored/aegis-opensource/manual.pdf>
