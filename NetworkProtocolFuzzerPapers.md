@@ -1,5 +1,19 @@
 # Network Protocol Fuzzers
 
+**Table of Contents**
+
+[TOCM]
+
+[TOC]
+
+## [HTTP](https://github.com/pinkhat-m/Internship2021/blob/master/NetworkProtocolFuzzerPapers.md#http)
+### [Finding Security Vulnerabilities in Network Protocol Implementations](https://github.com/pinkhat-m/Internship2021/blob/master/NetworkProtocolFuzzerPapers.md#finding-security-vulnerabilities-in-network-protocol-implementations)
+### [FuSeBMC: A White-Box Fuzzer for Finding Security Vulnerabilities in C Programs](https://github.com/pinkhat-m/Internship2021/blob/master/NetworkProtocolFuzzerPapers.md#fusebmc-a-white-box-fuzzer-for-finding-security-vulnerabilities-in-c-programs)
+### [AFLNET: A Greybox Fuzzer for Network Protocols](https://github.com/pinkhat-m/Internship2021/blob/master/NetworkProtocolFuzzerPapers.md#aflnet-a-greybox-fuzzer-for-network-protocols)
+## [Modbus](https://github.com/pinkhat-m/Internship2021/blob/master/NetworkProtocolFuzzerPapers.md#modbus)
+### [ICS Protocol Fuzzing: Coverage Guided Packet Crack and Generation](https://github.com/pinkhat-m/Internship2021/blob/master/NetworkProtocolFuzzerPapers.md#ics-protocol-fuzzing-coverage-guided-packet-crack-and-generation)
+
+
 # HTTP
 
 ## Finding Security Vulnerabilities in Network Protocol Implementations
@@ -83,6 +97,8 @@ Two main criteria:
 
 ## FuSeBMC: A White-Box Fuzzer for Finding Security Vulnerabilities in C Programs
 <https://arxiv.org/pdf/2012.11223.pdf>
+
+Unlike the previous paper, in this paper is not mentioned anything about the protocol usage, as I understood.
 
 ## AFL<sub>NET</sub>: A Greybox Fuzzer for Network Protocols
 <https://mboehme.github.io/paper/ICST20.AFLNet.pdf>

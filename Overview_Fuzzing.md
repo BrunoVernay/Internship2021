@@ -1,5 +1,12 @@
-
 # Overview
+
+**Table of Contents**
+
+[TOCM]
+
+[TOC]
+
+
 
 - **Fuzzing** is a dynamic analysis technique which detects vulnerabilities(crashes, memory leak, unhandled exception) by testing a program with different abnormal or random inputs.
 
