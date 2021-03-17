@@ -95,6 +95,8 @@ Two main criteria:
 ## FuSeBMC: A White-Box Fuzzer for Finding Security Vulnerabilities in C Programs
 <https://arxiv.org/pdf/2012.11223.pdf>
 
+<https://github.com/kaled-alshmrany/FuSeBMC>
+
 Unlike the previous paper, in this paper is not mentioned anything about the protocol usage, as I understood.
 
 ## AFL<sub>NET</sub>: A Greybox Fuzzer for Network Protocols

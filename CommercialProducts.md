@@ -32,99 +32,127 @@
             <th>Company/Person</th>
             <th>Open-source</th>
    	        <th>Protocol(s)</th>
+			<th>Type</th>
+			<th>Seed Inputs</th>
             <th>Priority*</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td><b>Mayhem</td>
+            <td><a href= "https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#mayhem"><b>Mayhem</a></td>
             <td><a href= "https://forallsecure.com/">ForAllSecure</a></td>
             <td>30-day free trial</td>
             <td>HTTP</td>
+			<td></td>
+			<td></td>
 			<td>1</td>
         </tr>
         <tr>
-            <td><b>BooFuzz</td>
+            <td><a href="https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#boofuzz---http--modbus"><b>BooFuzz</a></td>
 			<td><a href= "https://github.com/jtpereyda">jtpereyda</a></td>
 			<td>Yes</td>
-            <td>HTTP/Modbus</td>			
+            <td>HTTP/Modbus</td>
+			<td></td>
+			<td></td>			
 			<td>4</td>
         </tr>
         <tr>
-            <td><b>Peach</td>
+            <td><a href="https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#peach---http--modbus"><b>Peach</a></td>
 			<td><a href="https://about.gitlab.com/">GitLab</a></td>
 			<td>30-day free trial</td>
-            <td>HTTP/Modbus</td>			
+            <td>HTTP/Modbus</td>
+			<td></td>
+			<td></td>
 			<td>1</td>
         </tr>
         <tr>
-            <td><b>beSTORM</td>
+            <td><a href="https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#bestorm---modbus-protocol"><b>beSTORM</a></td>
 			<td><a href="https://beyondsecurity.com/">Beyond Security</a></td>
 			<td>Free trial</td>
-            <td>HTTP/Modbus</td>			
+            <td>HTTP/Modbus</td>
+			<td></td>
+			<td></td>
 			<td>3</td>
         </tr>
         <tr>
-            <td><b>AFL<sub>NET</sub></td>
+            <td><a href="https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#aflnet-a-greybox-fuzzer-for-network-protocolsstateful-coverage-based-greybox-fuzzing"><b>AFL<sub>NET</sub></a></td>
 			<td><a href="">Michal Zalewski</a></td>
 			<td>Yes</td>
-            <td>HTTP</td>			
+            <td>HTTP</td>
+			<td>Grey-box</td>
+			<td>Message sequences</td>
 			<td>2</td>
         </tr>
         <tr>
-            <td><b>APIFuzzer</td>
+            <td><a href="https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#apifuzzer--http-api-testing-framework"><b>APIFuzzer</a></td>
 			<td><a href="https://github.com/KissPeter">Péter Kiss</a></td>
 			<td>Yes</td>
-            <td>HTTP</td>			
+            <td>HTTP</td>
+			<td></td>
+			<td></td>
 			<td></td>
         </tr>
         <tr>
-            <td><b>Fuzz-testing HTTP endpoints(Plugin)</td>
+            <td><a href="https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#fuzz-testing-http-endpointsartillery"><b>Fuzz-testing HTTP endpoints(Plugin)</a></td>
 			<td><a href="https://artillery.io/">Artillery</a></td>
 			<td>Yes</td>
-            <td>HTTP</td>			
+            <td>HTTP</td>
+			<td></td>
+			<td></td>
 			<td></td>
         </tr>
         <tr>
-            <td><b>HTTP-Fuzzer</td>
+            <td><a href="https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#http-fuzzer"><b>HTTP-Fuzzer</a></td>
 			<td><a href="https://github.com/tehmoon">Tehmoon</a></td>
 			<td>Yes</td>
-            <td>HTTP</td>			
+            <td>HTTP</td>
+			<td></td>
+			<td></td>
 			<td></td>
         </tr>
         <tr>
-            <td><b>Wfuzz</td>
+            <td><a href="https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#wfuzz"><b>Wfuzz</a></td>
 			<td><a href="http://wfuzz.io/">Wfuzz</a></td>
 			<td>Yes</td>
-            <td>HTTP</td>			
+            <td>HTTP</td>
+			<td></td>
+			<td></td>
 			<td></td>
         </tr>
         <tr>
-            <td><b>SoapUI/ReadyAPI(Morefeatures)</td>
+            <td><a href="https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#soapui"><b>SoapUI/ReadyAPI(Morefeatures)</a></td>
 			<td><a href="https://smartbear.com/">SmartBear</a></td>
 			<td>Yes/14-day free trial</td>
-            <td>HTTP</td>			
+            <td>HTTP</td>
+			<td></td>
+			<td></td>
 			<td></td>
         </tr>           
         <tr>
-            <td><b>Fuzzowski</td>
+            <td><a href="https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#fuzzowski"><b>Fuzzowski</a></td>
 			<td><a href="https://www.nccgroup.com/">NCC Group Plc</a></td>
 			<td>Yes</td>
-            <td>Modbus</td>			
+            <td>Modbus</td>	
+			<td></td>
+			<td></td>
 			<td></td>
         </tr>
         <tr>
-            <td><b>Defensic</td>
+            <td><a href="https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#defensic"><b>Defensic</a></td>
 			<td><a href="https://www.synopsys.com/">Synopsys</a></td>
 			<td>No</td>
-            <td>Modbus</td>			
+            <td>Modbus</td>	
+			<td></td>
+			<td></td>
 			<td></td>
         </tr>         
         <tr>
-            <td><b>Aegis</td>
+            <td><a href="https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#aegis-2014"><b>Aegis</a></td>
 			<td><a href="https://stepfunc.io/">Step Function I/O</a></td>
 			<td>No</td>
-            <td>Modbus</td>			
+            <td>Modbus</td>	
+			<td></td>
+			<td></td>
 			<td></td>
         </tr>                                                              
     </tbody> 
