@@ -1,0 +1,11 @@
+USER anonymousASS wbuntd–––––¹––––––––––QUIk
+PASS ubuntu
+RNTO
+PWD
+PUIT
+PASS ubuntu
+SYST
+PWD
+PORT 127,0,0,1,152,193
+LIST
+QUIT

@@ -1,0 +1,7 @@
+USER anonymous
+PASS ubuntu
+SYS@@@@@@@(@@WD
+PORT 127,0T
+QUIT
+PWD
+PORT 127,0,0,1,152,193

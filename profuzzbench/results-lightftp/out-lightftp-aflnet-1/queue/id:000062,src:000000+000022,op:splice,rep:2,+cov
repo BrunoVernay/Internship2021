@@ -1,0 +1,9 @@
+USER anonymRýnym^@s
+PASS ubuntu
+
+PWD
+HELP 127,0,0,0,0,1,152,193
+LIST
+QUIT
+PASS ubuntu
+SYST

@@ -1,0 +1,30 @@
+USER ubuntu
+PASS ubuntmous
+PASS ubunymous
+lw!R rCDUPmzur
+PASS ubuntu
+SYST
+PWDS S @buntu
+SYST
+PWDS ubunASS ubuntmous
+PASS ubunymous
+lw!R rCDUPmzur
+PASS ubuntu
+SYST
+PWDS S @buntu
+SYST
+PWDS ubunymous
+UwER aCDU
+PORT 127,0,0,1,1XT,193
+LIScAP•E
+QUIE 127,0,ymous
+UwER aCDU
+PORT 127,0,0,1,1XT,193
+LIScAP•E
+QUIE 127,0,0,
+SYST
+PWD
+PORT 127,0,0,1,132,209
+LIST
+MKD test
+QUIT

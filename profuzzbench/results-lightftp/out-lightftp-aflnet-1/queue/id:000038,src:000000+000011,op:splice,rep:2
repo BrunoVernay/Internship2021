@@ -1,0 +1,7 @@
+USER anoS ubuntu 
+SYST
+PWD
+PORT 127,0,0,1,15ST
+QUIT
+PASS ubuntu
+SYST

@@ -1,0 +1,7 @@
+USER anonymo
+PASS uST
+PWD
+PORT 127,0,0, 127,0,0KD DELE
+QUIT
+PASS ubuntu
+SYST

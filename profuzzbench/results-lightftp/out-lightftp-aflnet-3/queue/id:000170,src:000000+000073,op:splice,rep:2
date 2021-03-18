@@ -1,0 +1,14 @@
+USER anonymous
+PASS ubuntu
+SYST
+PWD
+PORT 127,0,0,1,152,193
+LIST
+QUER ano-ntu
+T 127,0,'<127,0,0<11152ubuntu
+T 127,0,0<1152,193
+LIST
+QUIT
+PASS ub,0,0,1b152,193
+LIST
+QUIT

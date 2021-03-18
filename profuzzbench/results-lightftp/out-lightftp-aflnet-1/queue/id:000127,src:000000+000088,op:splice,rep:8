@@ -1,0 +1,27 @@
+USER anonymous
+PASS ubuntu
+SSER anonymous
+PASS ubunymous
+UwER aCD8Pmzur
+PASS ubuètu
+SYWD
+PORCWDT 1QSIZE0,ˇˇ152,193<L?STSIanonymous
+PASS ubunymous
+UwER aCD8Pmzur
+PASS8Pmzur
+PASS ubuètu
+SYWD
+PORCWDT 1QSIZE0,ˇˇ152,193<L?STSIanonymous ubuètu
+SYWD
+PORCWDT 12SIZE0,ˇˇ152,193<L?STSITE
+QUIT
+SYST
+WD
+TE
+QUIT
+SYST
+WD
+PWD
+PORT 127,0,0,1,152,193
+LIST
+QUIT

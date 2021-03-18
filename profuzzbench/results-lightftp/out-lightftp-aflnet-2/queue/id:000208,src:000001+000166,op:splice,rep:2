@@ -1,0 +1,29 @@
+USER ubuntu
+PASS ubonymous
+PASS ubunt
+PASS ubudntu
+S
+PWD
+POjT 127T
+PWD
+PORT 17,0,0,1,S ubudntu
+S
+PWD
+POjT 127PWD
+SYST
+PWD
+PORT 127,0,0,1,152,193
+LIST
+QUIR~Ò‘ê‘´‘‘‘ê‘´‘‘‘RETRV‘‘‘RETRV¶ÿÿo¤­¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡T 127,4,0,1,152,193
+SITE
+QUIT¶ÿÿ¤­¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡T 127,4,0,1,152,193
+SITE
+QUIT
+PASS ubuntu
+SYST
+SYST
+PWD
+PORT 127,0,0,1,132,209
+LIST
+MKD test
+QUIT

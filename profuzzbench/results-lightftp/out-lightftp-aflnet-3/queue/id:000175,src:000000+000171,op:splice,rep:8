@@ -1,0 +1,17 @@
+USER anonymous
+PASS ubuntu
+SYST
+PWD
+PORT 127,0,0,1,152,193
+LIST
+USER anonymousó	PASS ubuntu
+SYST
+PÿÿÿPOUSE-ntu
+T 127,0,'<127E0,0<11ù052ubuntu
+T 127,0,0<11'<127E0,0<11ù052ubuntu
+T 127,0,0<1152,193
+LIST
+QUIT
+PASS ub,0,0,1b152,193
+LIST
+QUIT

@@ -1,0 +1,11 @@
+USER anonymous
+PASS ubuuntu
+SYST
+PWD
+PORT 127,
+LIST
+Q0,0,1,152,193
+LIST
+QUIT
+SYST
+PWD

@@ -1,0 +1,10 @@
+USER anonymous
+ÿÿÿ aCDUPmzur
+PASS ubuntu
+SYST
+PWD
+PORT 127,0,0,1,12,193
+LIST
+QUIT
+SYST
+PWD

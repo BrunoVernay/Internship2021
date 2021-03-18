@@ -1,0 +1,16 @@
+USER anonymRýnym^@s
+PASS ubuntu
+
+PWD
+HELP 127,0,0,0,0,1,152,193
+LSER ubunbuntu
+SYST
+PWD
+PORT 127,0,0,1,132,209
+LIST
+MK
+PASVLIST
+MKD test
+QUIT
+PASS ubuntu
+SYST

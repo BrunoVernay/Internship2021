@@ -1,0 +1,9 @@
+USER anonymous
+PASS ubunymoumzur
+PASS ubuètu
+SYWD
+PORT 12@,193
+LIST
+QUIT
+SYSTPWD
+SYST

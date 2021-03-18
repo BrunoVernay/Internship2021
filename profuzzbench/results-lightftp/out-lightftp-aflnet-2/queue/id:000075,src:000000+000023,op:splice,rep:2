@@ -1,0 +1,10 @@
+USER anonymous
+PASS ubuuntu
+SYST
+SS ubuuntu 
+SYST
+PWD
+PORT 1LIST
+QUIT
+SYST
+PWD

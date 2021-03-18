@@ -1,0 +1,17 @@
+USER anonymous
+PASS ubunt
+PASS ubudntu
+S
+PWD
+POjT 127T
+PWD
+PORT 17,0,0,1,S ubudntu
+S
+PWD
+POjT 127PWD
+SYST
+PWD
+PORT 127,0,0,1,152,193
+LIST
+UkT
+QUIT
