@@ -16,6 +16,7 @@
 	* [ParmeSan: Sanitizer-guided Greybox Fuzzing](https://github.com/pinkhat-m/Internship2021/blob/master/FuzzingPapersDrafts.md#parmesan-sanitizer-guided-greybox-fuzzing)
 	* [USBFuzz: A Framework for Fuzzing USB Drivers by Device Emulation](https://github.com/pinkhat-m/Internship2021/blob/master/FuzzingPapersDrafts.md#usbfuzz-a-framework-for-fuzzing-usb-drivers-by-device-emulation)
 	* [MOPT: Optimize Mutation Scheduling for Fuzzers](https://github.com/pinkhat-m/Internship2021/blob/master/FuzzingPapersDrafts.md#mopt-optimize-mutation-scheduling-for-fuzzers)
+	* [Corpus Distillation for Effective Fuzzing](https://github.com/pinkhat-m/Internship2021/blob/master/FuzzingPapersDrafts.md#corpus-distillation-for-effective-fuzzing)
 
 - [NetworkProtocolFuzzerPapers](https://github.com/pinkhat-m/Internship2021/blob/master/NetworkProtocolFuzzerPapers.md)
 	* [HTTP](https://github.com/pinkhat-m/Internship2021/blob/master/NetworkProtocolFuzzerPapers.md#http)
@@ -49,4 +50,7 @@
 
 - Practical Part
 	* [Practical_Notes](https://github.com/pinkhat-m/Internship2021/blob/master/practical-note.md)
+	* [profuzzbench](https://github.com/pinkhat-m/Internship2021/tree/master/profuzzbench)
+		+ [ProFuzzBench: A Benchmark for Stateful Protocol Fuzzing](https://arxiv.org/pdf/2101.05102.pdf)
 	* [TechnicalDetailsAFLnet](https://github.com/pinkhat-m/Internship2021/blob/master/TechnicalDetailsAFLnet.md)
+	

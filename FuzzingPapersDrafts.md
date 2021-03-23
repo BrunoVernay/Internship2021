@@ -18,6 +18,7 @@
 - [ParmeSan: Sanitizer-guided Greybox Fuzzing](https://github.com/pinkhat-m/Internship2021/blob/master/FuzzingPapersDrafts.md#parmesan-sanitizer-guided-greybox-fuzzing)
 - [USBFuzz: A Framework for Fuzzing USB Drivers by Device Emulation](https://github.com/pinkhat-m/Internship2021/blob/master/FuzzingPapersDrafts.md#usbfuzz-a-framework-for-fuzzing-usb-drivers-by-device-emulation)
 - [MOPT: Optimize Mutation Scheduling for Fuzzers](https://github.com/pinkhat-m/Internship2021/blob/master/FuzzingPapersDrafts.md#mopt-optimize-mutation-scheduling-for-fuzzers)
+- [Corpus Distillation for Effective Fuzzing](https://github.com/pinkhat-m/Internship2021/blob/master/FuzzingPapersDrafts.md#corpus-distillation-for-effective-fuzzing)
 
 
 ## Active Fuzzing for Testing and Securing Cyber-Physical Systems
@@ -345,3 +346,44 @@ The **mutation scheduler** aims at choosing the next optimal mutation operator, 
     - updating modules
     - the pilot fuzzing
     - core fuzzing modules
+    
+    
+    
+## Corpus Distillation for Effective Fuzzing
+<https://arxiv.org/pdf/1905.13055.pdf>
+
+Mutation-based fuzzing typically uses an initial set of valid seed inputs from which to generate new seeds by random mutation. A given corpus of potential seeds will often contain thousands of inputs that generate similar behavior in the target, which can lead to wasted fuzzing effort in exhaustive mutation from all available seeds.
+
+Several properties one might desire of the collection of seeds that form the initial corpus:
+- Property 1 (Maximize coverage of target behaviors): seeds should collectively exercise as much code as possible.
+- Property 2 (Eliminate redundancy in seed behavior): Candidate seeds that are behaviorally similar to one another (produce the same code coverage) should be represented in the corpus by a single seed.
+- Property 3 (Minimize the total size of the corpus): This reduces storage costs and results in a significant reduction of the mutation search space.
+- Property 4 (Minimize the sizes of the seeds): Fuzzers are highly I/O bound, so smaller seed files should be preferred to reduce I/O requests to the storage system. In turn, this will shorten the execution time of each iteration, achieving more coverage in any fixed amount of time.
+
+Code coverage is conventionally used to characterize seeds in a fuzzing corpus due to the strong positive correlation between code coverage and bugs found while fuzzing. Finding the minimum set cover C is therefore equivalent to finding the minimum set of seeds that still maintains the code coverage observed in the collection corpus. By definition, C satisfies Properties 1 to 3. Solving WMSCP, where weights correspond to the seed size, also satisfies Property 4.
+
+#### Corpus Distillation Techniques
+Abdelnur et al. first introduced the idea of computing C over code coverage as a seed selection strategy. They used a simple greedy algorithm to solve the unweighted MSCP.
+
+- Minset: extended the work of Abdelnur et al. by also computing C weighted by execution time and file size.
+Rebert et al. found that Unweighted Minset—an unweighted greedy-reduced distillation—performed best in terms of distillation ability, and that the Peach Set algorithm(based on the Peach fuzzer’s peachminset tool) found the highest number of bugs
+
+- afl-cmin: reuses AFL’s own notion of edge coverage to categorize seeds at distillation time, recording an approximation of edge frequency count, not just whether the edge has been taken. When distilling, afl-cmin chooses the smallest seed in the collection corpus that covers a given edge, and then performs a greedy, weighted distillation.
+
+- MoonShine: is a corpus distillation tool for OS fuzzers. OS fuzzers typically test the system-call interface between the OS kernel and user-space applications.
+
+- SmartSeed: uses a machine learning model to generate “valuable” seeds, where a seed is considered valuable if it uncovers new code or produces a crash.
+
+- *MoonLight*: represents the coverage data for a corpus as a matrix: each row is a bit vector corresponding to one seed, and each column to a possible edge between basic blocks in the target program (or library). Such a matrix A has Aij = 1 if seed i causes the target to traverse edge j, and is zero otherwise. The objective is to find minset(A): the smallest weighted set of seeds that covers all of the columns (edges) in A that have at least one non-zero value. (A column in A consisting of all zeroes represents an edge never taken by any of the seeds.) The unweighted version of the problem (MSCP) simply finds the smallest set of rows (i.e., seeds) that spans all of the columns. Much like Minset, MoonLight also supports distillations weighted by file size and execution time. To solve the (W)MSCP, the MoonLight algorithm applies dynamic programming to take a large coverage matrix and recursively transform it through row and column eliminations into successively smaller matrices while accumulating a minimum cover set C.
+
+##### Summary of Results:
+
+*CMIN* produces significantly larger corpora compared to ML-S and MS-U. It also had the highest false negative count of the distilled corpora (it failed to find seven of the bugs in the real-world target set, compared to ML-S and MS-U, which failed to find five and six bugs respectively). However, CMIN does outperform ML-S on 11 of the 33 bugs by finding them more reliably. This bug-finding reliability is important due to the highly-stochastic nature of fuzzing.
+
+*ML-S* outperforms CMIN and other approaches overall, in terms of mean bug-finding speed. It out-performed CMIN on 24 of the bugs, and MS-U on 22 bugs. Notably, ML-S found five bugs that were never found by MS-U. This bug-finding speed is important when a fuzzing campaign is limited in the time that it can run for.
+
+*MS-U* corpora have good performance, in general: they were the fastest at finding eight of the bugs from both benchmark suites, and found four bugs that were never found by ML-S. Both MS-U and ML-S have similar measures of bug-finding reliability.
+
+*Full* is recommended only when the total number of seeds is small—i.e., on the order of a few hundred or less. When there are thousands of seeds in the collection corpus it is imperative that some form of distillation is applied. This is particularly evident in the FTS’ guetzli target: AFL never completed the initial run of all 120,000 seeds in the corpus. These results agree with those found by Rebert et al.
+
+*Empty* performs surprisingly well on average. However, individual trials may differ wildly from the mean. It performed best on highly unstructured data (e.g., audio codecs) and poorly on structured data (e.g., PDF). It may make sense to always add the empty seed to any fuzzing corpus and rely on the fuzzer’s own reinforcement learning to decide if the empty seed is valuable or not. Alternatively, giving the empty seed its own, separate, campaign and forcing the fuzzer to attack the one seed’s descendants may be what it is required to see the speedy results. Certainly, in the case where the empty corpus finds a particular bug, it tends to be the fastest to find it.
