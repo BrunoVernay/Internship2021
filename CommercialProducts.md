@@ -10,7 +10,7 @@
 	* [beSTORM](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#bestorm---modbus-protocol)
 	* [AFLNet](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#aflnet-a-greybox-fuzzer-for-network-protocolsstateful-coverage-based-greybox-fuzzing)
 	* [APIFuzzer](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#apifuzzer--http-api-testing-framework)
-	* [Fuzz-testing HTTP endpoints](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#fuzz-testing-http-endpointsartillery)
+	* [Fuzz-testing HTTP endpoints](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#fuzz-testing-http-endpointsplugin)
 	* [HTTP-FUZZER](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#http-fuzzer)
 	* [Wfuzz](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#wfuzz)
 	* [SoapUI](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#soapui)
@@ -43,7 +43,7 @@
             <td><a href= "https://forallsecure.com/">ForAllSecure</a></td>
             <td>30-day free trial</td>
             <td>HTTP</td>
-			<td></td>
+			<td>Black-box</td>
 			<td></td>
 			<td>1</td>
         </tr>
@@ -52,7 +52,7 @@
 			<td><a href= "https://github.com/jtpereyda">jtpereyda</a></td>
 			<td>Yes</td>
             <td>HTTP/Modbus</td>
-			<td></td>
+			<td>Black-box</td>
 			<td></td>			
 			<td>4</td>
         </tr>
@@ -61,7 +61,7 @@
 			<td><a href="https://about.gitlab.com/">GitLab</a></td>
 			<td>30-day free trial</td>
             <td>HTTP/Modbus</td>
-			<td></td>
+			<td>Black-box</td>
 			<td></td>
 			<td>1</td>
         </tr>
@@ -70,7 +70,7 @@
 			<td><a href="https://beyondsecurity.com/">Beyond Security</a></td>
 			<td>Free trial</td>
             <td>HTTP/Modbus</td>
-			<td></td>
+			<td>Black-box</td>
 			<td></td>
 			<td>3</td>
         </tr>
@@ -80,7 +80,7 @@
 			<td>Yes</td>
             <td>HTTP</td>
 			<td>Grey-box</td>
-			<td>Message sequences</td>
+			<td>Message sequences(Manually)</td>
 			<td>2</td>
         </tr>
         <tr>
@@ -98,7 +98,7 @@
 			<td>Yes</td>
             <td>HTTP</td>
 			<td></td>
-			<td></td>
+			<td>The Big List Of Naughty Strings</td>
 			<td></td>
         </tr>
         <tr>
@@ -107,7 +107,7 @@
 			<td>Yes</td>
             <td>HTTP</td>
 			<td></td>
-			<td></td>
+			<td>raw http request file as input</td>
 			<td></td>
         </tr>
         <tr>
@@ -125,7 +125,7 @@
 			<td>Yes/14-day free trial</td>
             <td>HTTP</td>
 			<td></td>
-			<td></td>
+			<td>random input</td>
 			<td></td>
         </tr>           
         <tr>
@@ -142,7 +142,7 @@
 			<td><a href="https://www.synopsys.com/">Synopsys</a></td>
 			<td>No</td>
             <td>Modbus</td>	
-			<td></td>
+			<td>Black-box</td>
 			<td></td>
 			<td></td>
         </tr>         
@@ -151,7 +151,7 @@
 			<td><a href="https://stepfunc.io/">Step Function I/O</a></td>
 			<td>No</td>
             <td>Modbus</td>	
-			<td></td>
+			<td>white/grey-box</td>
 			<td></td>
 			<td></td>
         </tr>                                                              
