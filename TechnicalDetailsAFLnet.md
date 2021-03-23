@@ -1,7 +1,7 @@
 # More technical details of AFLnet fuzzer in the git repository
 <https://github.com/profuzzbench/aflnet>
 
-- *docs/INSTALL*
+- **docs/INSTALL**
 
 	4) Linux or *BSD on non-x86 systems
 
@@ -20,20 +20,20 @@
 	instead of the traditional afl-gcc or afl-clang wrappers.
 
 -----------------------
-- *docs/QuickStartGuide*
+- **docs/QuickStartGuide**
 number 3, 4, 5
 
 ---------------------------
-- *docs/env_variables.txt*
+- **docs/env_variables.txt**
 More options/flags for the compiler afl-clang, afl-gcc and afl-clang-fast
 and for afl-fuzz itself.
 
 ------------------------------
-- *docs/historical_notes.txt*
+- **docs/historical_notes.txt**
 more explanation of afl compare to other tools or techniques
 
 -------------------------------
-- *docs/life_pro_tips.txt*
+- **docs/life_pro_tips.txt**
 some quick tips of all the files
 
 such as:::
@@ -47,16 +47,16 @@ such as:::
 "you take a crashing test case and give it to afl-fuzz as a starting point for the automated run. The fuzzer then uses its usual feedback mechanisms and genetic algorithms to see how far it can get within the instrumented codebase while still keeping the program in the crashing state. Mutations that stop the crash from happening are thrown away; so are the ones that do not alter the execution path in any appreciable way. The occasional mutation that makes the crash happen in a subtly different way will be kept and used to seed subsequent fuzzing rounds later on."
 
 -----------------------
-- *docs/parallel_fuzzing.txt*
+- **docs/parallel_fuzzing.txt**
 	- Single-system parallelization
 	- Multi-system parallelization
 
 -----------------------------
-- *docs/perf_tips.txt*
+- **docs/perf_tips.txt**
 Performance tips
 
 --------------------------
-- *docs/siste_projects.txt*
+- **docs/siste_projects.txt**
 This doc lists some of the projects that are inspired by, derived from, designed for, or meant to integrate with AFL.
 
 	E.g:
