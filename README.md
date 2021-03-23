@@ -47,4 +47,6 @@
 		+ [Aegis](https://github.com/pinkhat-m/Internship2021/blob/master/CommercialProducts.md#aegis-2014)
 
 
-- [Practical_Notes](https://github.com/pinkhat-m/Internship2021/blob/master/practical-note.md)
+- Practical Part
+	* [Practical_Notes](https://github.com/pinkhat-m/Internship2021/blob/master/practical-note.md)
+	* [TechnicalDetailsAFLnet](https://github.com/pinkhat-m/Internship2021/blob/master/TechnicalDetailsAFLnet.md)
