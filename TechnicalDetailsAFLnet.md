@@ -48,7 +48,10 @@ such as:::
 
 -----------------------
 - **docs/parallel_fuzzing.txt**
+
 	- Single-system parallelization
+		You can also monitor the progress of your jobs from the command line with the provided afl-whatsup tool. When the instances are no longer finding new paths, it's probably time to stop.
+		
 	- Multi-system parallelization
 
 -----------------------------
